@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourism | Blog</title>
+    <link rel="stylesheet" href="{% static 'tour.css' %}" />
+  </head>
+  <body>
+    <section id="menuBtn">
+      <div id="topNav">
+        <nav>
+          <ul>
+            <li><a href="#"> Home</a></li>
+            <li><a href="#blog"> Blog</a></li>
+            <li><a href="#ABOUT"> About/Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="head1">
+        <h1>GHANA TOURISM BLOG</h1>
+      </div>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione omnis,
+        excepturi corporis quasi, consectetur tenetur, ea obcaecati maiores
+        commodi quam magni amet corrupti? Dolorem explicabo, dolore quisquam
+        nihil et totam, ullam quo autem, maiores molestias asperiores molestiae
+        numquam nisi consequuntur? Doloremque consequatur recusandae assumenda
+        quae veritatis nihil voluptates enim esse cumque, rem ratione eaque eos
+        fuga culpa voluptas quod nesciunt a odit placeat, quasi earum provident
+        perferendis accusantium. Velit consectetur neque vel nobis sapiente
+        perferendis itaque error id nam culpa. Nihil voluptas delectus sapiente
+        dolores cum dicta rerum magni, blanditiis quo deleniti, consequatur
+        natus sed vel possimus maiores? Qui, soluta.
+      </p>
+    </section>
+    <section id="blog">
+      <div class="blogh">
+        <h1>BLOGS</h1>
+        <p>
+          Find Some of The Most Interesting Tourist Destinations in The World
+        </p>
+      </div>
+
+      <div class="BLOG">
+        {% for site in sites %}
+        <div class="singleblog">
+          <img src="{{site.image.url}}" alt="" />
+          <h1>
+            <a href="https://www.wikipedia.com">{{site.title}}</a>
+          </h1>
+          <h1>{{site.date}}</h1>
+          <p>{{site.details}}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    <!-- about -->
+    <section id="ABOUT">
+      <div class="blogh">
+        <div class="blogh">
+          <h1>ABOUT / CONTACT</h1>
+          <p>Know More About Us or You can Get in Touch</p>
+        </div>
+      </div>
+      <div class="about-contact">
+        <div class="about-left">
+          <h1>Know Some Awesome Things About Us</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum laborum
+            et quasi dolorum vero pariatur doloribus iusto? Quas atque molestias
+            sunt reprehenderit exercitationem, expedita in commodi minima alias
+            inventore, id earum ut. Omnis accusamus ullam, non optio harum
+            facere perspiciatis impedit. Deserunt dolore unde libero dicta
+            mollitia cumque explicabo? Neque, corrupti. Voluptatibus quas fuga
+            delectus eveniet harum odio dignissimos! Ipsam.
+          </p>
+        </div>
+        <div class="contact-right">
+          <h1>Hear from Our Team</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum laborum
+            et quasi dolorum vero pariatur doloribus iusto? Quas atque molestias
+            sunt reprehenderit exercitationem, expedita in commodi minima alias
+            inventore, id earum ut. Omnis accusamus ullam, non optio harum
+            facere perspiciatis impedit. Deserunt dolore unde libero dicta
+            mollitia cumque explicabo? Neque, corrupti. Voluptatibus quas fuga
+            delectus eveniet harum odio dignissimos! Ipsam.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="FEEDBACKS">
+      <div class="blogh">
+        <h1>FEEDBACK</h1>
+        <p>Let's Know What You Think About Our Blog</p>
+      </div>
+      <div class="feedback">
+        {% for feed in feeds %}
+        <div class="comments">
+          <img src="{{feed.image.url}}" alt="gibrish" />
+          <div class="handle">
+            <h1>{{feed.name}}</h1>
+            <small>{{feed.tweethandl}}</small>
+          </div>
+        </div>
+        <p>{{feed.tweet}}</p>
+        {% endfor %}
+      </div>
+    </section>
+    <footer class="footnote">
+      <p>Copyright &copy</p>
+      <p>This blog is subject to the copyright law of the Republic of Ghana</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* font-family: sans-serif monospace; */
+}
+#menuBtn {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #009688), url(./flag.jpg);
+  height: 100vh;
+  background-size: cover;
+}
+
+.head1 {
+  font: bold;
+  font-size: 50px;
+}
+.head1 h1 {
+  text-align: center;
+  padding-top: 200px;
+}
+p {
+  padding: 30px;
+}
+#topNav {
+  text-align: right;
+  padding: 30px;
+  top: 10px;
+}
+nav ul li {
+  list-style: none;
+  display: inline-flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+nav ul li a {
+  padding: 0 20px;
+  color: #fff;
+}
+#blog {
+  padding: 50px 50px;
+  background: rgb(189, 189, 162);
+}
+.blogh {
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 20px;
+}
+.blogh p {
+  font-size: x-large;
+}
+.BLOG {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+}
+.singleblog {
+  flex-basis: 48%;
+  text-align: center;
+}
+.singleblog img {
+  border-radius: 15px;
+  width: 600px;
+  text-align: center;
+  height: 300px;
+}
+.singleblog h1 {
+  text-align: center;
+}
+.singleblog p {
+  padding: 30px;
+  text-align: left;
+}
+
+#ABOUT {
+  padding: 50px;
+  background: rgb(184, 189, 185);
+}
+.about-contact {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.about-left p {
+  text-align: left;
+  border: 2px solid #009688;
+  border-radius: 15px;
+  line-height: 40px;
+}
+
+.contact-right p {
+  text-align: left;
+  border: 2px solid #009688;
+  border-radius: 15px;
+  line-height: 40px;
+}
+@media screen and (max-width: 770px) {
+  .about-contact {
+    width: 100%;
+  }
+}
+#FEEDBAKCS {
+  width: 100%;
+  background: rgb(183, 189, 174);
+}
+.feedback {
+  padding: 0 70px;
+  width: calc(100%-50px);
+  margin: auto;
+  display: flex;
+  text-align: left;
+  flex-basis: 30%;
+}
+.comments {
+  flex-basis: 30%;
+  justify-content: space-between;
+}
+.comments p {
+  text-align: left;
+}
+.handle {
+}
+.comments img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+.comments small {
+  color: rgb(45, 223, 214);
+}
+.footnote {
+  background: #009688;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 0 5px;
+}
