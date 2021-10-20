@@ -92,27 +92,42 @@
         </div>
       </div>
     </section>
-    <section id="FEEDBACKS">
-      <div class="blogh">
-        <h1>FEEDBACK</h1>
-        <p>Let's Know What You Think About Our Blog</p>
-      </div>
-      <div class="feedback">
-        {% for feed in feeds %}
-        <div class="comments">
-          <img src="{{feed.image.url}}" alt="gibrish" />
-          <div class="handle">
-            <h1>{{feed.name}}</h1>
-            <small>{{feed.tweethandl}}</small>
-          </div>
-        </div>
+    <div class="blogh">
+      <h1>FEEDBACK</h1>
+      <p>Let's Know What You Think About Our Blog</p>
+    </div>
+    <div class="flexprop">
+      <!-- <div class="tweets"> -->
+      {% for feed in feeds %}
+      <div class="tweets">
+        <h4>{{feed.name}}</h4>
+        <h6>@{{feed.tweethandl}}</h6>
         <p>{{feed.tweet}}</p>
-        {% endfor %}
       </div>
-    </section>
+      {% endfor %}
+    </div>
+    <center>
+      <form action="tourism" method="POST">
+        {% csrf_token %} {{form.as_table}}
+        <input type="submit" value="add comment" />
+      </form>
+    </center>
     <footer class="footnote">
       <p>Copyright &copy</p>
       <p>This blog is subject to the copyright law of the Republic of Ghana</p>
     </footer>
   </body>
 </html>
+<!-- <div>
+  <p>this is the student class display</p>
+  <div class="flexprop"> -->
+<!-- <div class="tweets"> -->
+
+<!-- <div class="tweets">
+      <img src="./abe.jpg" alt="camera" />
+      <h4>{{feed.name}}</h4>
+      <h6>@{{feed.tweethandl}}</h6>
+      <p>{{feed.tweet}}</p>
+    </div>
+  </div>
+</div> -->

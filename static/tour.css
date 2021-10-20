@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  /* font-family: sans-serif monospace; */
+  box-sizing: border-box;
 }
 #menuBtn {
   background: linear-gradient(rgba(0, 0, 0, 0.5), #009688), url(./flag.jpg);
@@ -51,11 +51,10 @@ nav ul li a {
   width: 90%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin: auto;
+  justify-content: space-between;
 }
 .singleblog {
-  flex-basis: 48%;
+  flex-basis: 45%;
   text-align: center;
 }
 .singleblog img {
@@ -100,33 +99,24 @@ nav ul li a {
     width: 100%;
   }
 }
-#FEEDBAKCS {
+/* #FEEDBAKCS {
   width: 100%;
   background: rgb(183, 189, 174);
-}
-.feedback {
-  padding: 0 70px;
-  width: calc(100%-50px);
-  margin: auto;
+} */
+.flexprop {
   display: flex;
-  text-align: left;
-  flex-basis: 30%;
-}
-.comments {
-  flex-basis: 30%;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px;
 }
-.comments p {
-  text-align: left;
+.tweets {
+  flex-basis: 18%;
+  box-shadow: 0 10px 20px 3px #e4891214;
+  cursor: pointer;
 }
-
-.comments img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-}
-.comments small {
-  color: rgb(45, 223, 214);
+.tweets h6 {
+  font-style: italic;
+  color: #009688;
 }
 .footnote {
   background: #009688;
