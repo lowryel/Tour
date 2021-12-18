@@ -25,7 +25,7 @@ SECRET_KEY = '133v^tbwa-qdp=_=i)jz89-9lr*!37wr!c2c&xu*4d@^dcm@4a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['lowry.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
