@@ -3,8 +3,11 @@
   margin: 0;
   /* font-family: sans-serif monospace; */
 }
+body{
+  width: 100%;
+}
 #menuBtn {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), #009688), url(./flag.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), #99f3ea7e), url(./img/flag.jpg);
   height: 100vh;
   background-size: cover;
 }
@@ -48,21 +51,21 @@ nav ul li a {
   font-size: x-large;
 }
 .BLOG {
-  width: 90%;
-  display: flex;
+  width: 100%;
+  display: inline-flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin: auto;
+  justify-content: flex-start;
+  margin-top: 20px;
 }
 .singleblog {
   flex-basis: 48%;
   text-align: center;
 }
-.singleblog img {
+.blogImg img {
   border-radius: 15px;
-  width: 600px;
-  text-align: center;
-  height: 300px;
+  width: 400px;
+  text-align: left;
+  height: 250px;
 }
 .singleblog h1 {
   text-align: center;
@@ -96,42 +99,73 @@ nav ul li a {
   line-height: 40px;
 }
 @media screen and (max-width: 770px) {
-  .about-contact {
+  body{
     width: 100%;
   }
+  .singleblog {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .blogImg img {
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+    height: 200px;
+  }
+  .head1 h1 {
+    text-align: center;
+    padding-top: 50px;
+  }
+  #Feedback {
+    width: 100%;
+    background-size: cover;
+  }
+  .tweets{
+    flex-basis: 40%;
+    text-align: justify;
+  }
+  .form-class{
+    width: 30px;
+    height: 50px;
+  }
 }
-#FEEDBAKCS {
-  width: 100%;
-  background: rgb(183, 189, 174);
+
+#Feedback {
+  padding: 50px;
+  background: linear-gradient(to bottom, rgb(180, 221, 245), rgb(206, 205, 205), rgb(239, 252, 248));
 }
-.feedback {
-  padding: 0 70px;
-  width: calc(100%-50px);
-  margin: auto;
-  display: flex;
-  text-align: left;
+.flexprop{
+  width: auto;
+  display: inline-flex;
+  justify-content: start;
+  flex-wrap: wrap;
+
+}
+.tweets{
   flex-basis: 30%;
 }
-.comments {
-  flex-basis: 30%;
-  justify-content: space-between;
-}
-.comments p {
-  text-align: left;
-}
-.handle {
-}
-.comments img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-}
-.comments small {
-  color: rgb(45, 223, 214);
-}
+
 .footnote {
   background: #009688;
   text-align: center;
   margin-bottom: 0;
   padding: 0 5px;
 }
+.InputBtn{
+  width: 120px;
+  height: 2em;
+  font-size: medium;
+  background: rgb(5, 118, 184);
+  color: rgb(254, 255, 219);
+  border-radius: 15px;
+}
+.InputBtn:hover{
+  background: cornsilk;
+  color: black;
+  transition: 0.5s;
+}
+.form-class{
+  width: 50px;
+  border-radius: 50px;
+}
+

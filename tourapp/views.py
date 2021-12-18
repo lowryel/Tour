@@ -10,14 +10,12 @@ def tourism(request):
     tour_sites = tourModel.objects.all()
     feedback = feedbackModel.objects.all()
 
-    if request.method == "POST":
-        form = feedbackForm(request.POST)
-        if form.is_valid():
-            obj = form.save(commit=False)
-            obj.save()
-            return redirect('tourism')
-    else:
-        form = feedbackForm()
+
+    form = feedbackForm(request.POST)
+    if form.is_valid():
+        obj = form.save(commit=False)
+        obj.save()
+        return redirect('tourism')
     context = {
         "sites": tour_sites,
         "feeds": feedback,
