@@ -10,7 +10,6 @@ def tourism(request):
     tour_sites = tourModel.objects.all()
     feedback = feedbackModel.objects.all()
 
-
     form = feedbackForm(request.POST)
     if form.is_valid():
         obj = form.save(commit=False)
