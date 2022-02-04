@@ -46,22 +46,21 @@
           Find Some of The Most Interesting Tourist Destinations in The World
         </p>
       </div>
+      {% for site in sites %}
+        <h1 class="blogHeading">
+          <a href="https://www.wikipedia.com">{{site.title}}</a>
+        </h1>
 
       <div class="BLOG">
-        {% for site in sites %}
         <div class="blogImg">
           <img src="{{site.image.url}}" alt=""/>
         </div>
         <div class="singleblog">
-          <h1>
-            <a href="https://www.wikipedia.com">{{site.title}}</a>
-          </h1>
           <h1>{{site.date}}</h1>
           <p>{{site.details}}</p>
         </div>
-        {% endfor %}
       </div>
-      
+      {% endfor %}
     </section>
     <!-- about -->
     <section id="ABOUT">
@@ -112,13 +111,15 @@
         </div>
         {% endfor %}
       </div>
-      <div>
+      <div class="feedForm">
         <table>
           <thead>
             <td  class="form-class">
-              <form action="tourism" method="POST" style="width: 100px;">
-                {% csrf_token %} {{form.as_table}}
-                <h4>Add Comment:<input type="submit" value="Add comment" class="InputBtn"/></h4>
+              <tr>
+                <form action="tourism" method="POST" style="width: 50px;">
+                  {% csrf_token %} {{form.as_table}}
+              </tr>
+                <tr<input type="submit" value="Add comment" class="InputBtn"/></tr>
               </form>
             </td>
           </thead>

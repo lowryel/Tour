@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  /* font-family: sans-serif monospace; */
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 body{
   width: 100%;
@@ -37,6 +37,9 @@ nav ul li {
 nav ul li a {
   padding: 0 20px;
   color: #fff;
+  text-decoration: none;
+  background-color: rgb(170, 91, 177);
+  border-radius: 10px;
 }
 #blog {
   padding: 50px 50px;
@@ -48,13 +51,13 @@ nav ul li a {
   font-size: 20px;
 }
 .blogh p {
-  font-size: x-large;
+  font-size:larger;
 }
 .BLOG {
   width: 100%;
   display: inline-flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   margin-top: 20px;
 }
 .singleblog {
@@ -67,7 +70,7 @@ nav ul li a {
   text-align: left;
   height: 250px;
 }
-.singleblog h1 {
+.blogHeading{
   text-align: center;
 }
 .singleblog p {
@@ -81,26 +84,48 @@ nav ul li a {
 }
 .about-contact {
   padding-top: 15px;
-  display: flex;
-  justify-content: space-around;
+  display: inline-flex;
+  justify-content: space-evenly;
   text-align: center;
+  margin: 15px;
 }
 .about-left p {
   text-align: left;
   border: 2px solid #009688;
   border-radius: 15px;
-  line-height: 40px;
 }
 
 .contact-right p {
   text-align: left;
   border: 2px solid #009688;
   border-radius: 15px;
-  line-height: 40px;
 }
 @media screen and (max-width: 770px) {
   body{
     width: 100%;
+    font-size: 10px;
+  }
+  .about-left p {
+    border: none;
+  }
+  
+  .contact-right p {
+    border: none;
+  }
+  .about-contact {
+    padding-top: 5px;
+    margin: 0;
+    display: block;
+  }
+  #blog {
+    padding: 5px;
+  }
+  #ABOUT {
+    padding: 0;
+  }
+  nav ul li a {
+    padding: 5px;
+    font-size: 10px;
   }
   .singleblog {
     flex-basis: 100%;
@@ -114,37 +139,64 @@ nav ul li a {
   }
   .head1 h1 {
     text-align: center;
-    padding-top: 50px;
+    padding-top: 10px;
   }
   #Feedback {
-    width: 100%;
-    background-size: cover;
+
   }
   .tweets{
-    flex-basis: 40%;
-    text-align: justify;
+    flex-basis: 100%;
   }
   .form-class{
-    width: 30px;
-    height: 50px;
+    width: 0;
+    height: 0;
+  }
+  #topNav {
+    padding: 5px;
+    top: 0;
+  }
+  .feedForm{
+    width: 60%;
+
+  }
+  .flexprop{
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+  }
+  .tweets{
+    flex-basis: 100%;
+    width: 100%;
+  }
+  table{
+    width: 30%;
+    font-size: small;
+    height: 40px;
+  }
+  form{
+    width: 100%;
+    max-width: 50%;
   }
 }
 
 #Feedback {
-  padding: 50px;
+  width: 100%;
+  padding: 5px;
   background: linear-gradient(to bottom, rgb(180, 221, 245), rgb(206, 205, 205), rgb(239, 252, 248));
 }
 .flexprop{
-  width: auto;
-  display: inline-flex;
-  justify-content: start;
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-
 }
 .tweets{
-  flex-basis: 30%;
+  text-align: left;
+  margin: 0 30px;
 }
-
+.tweets h4 h6{
+  text-align: center;
+  padding-left: 20px;
+}
 .footnote {
   background: #009688;
   text-align: center;
@@ -154,7 +206,7 @@ nav ul li a {
 .InputBtn{
   width: 120px;
   height: 2em;
-  font-size: medium;
+  font-size: small;
   background: rgb(5, 118, 184);
   color: rgb(254, 255, 219);
   border-radius: 15px;
@@ -168,4 +220,3 @@ nav ul li a {
   width: 50px;
   border-radius: 50px;
 }
-
